@@ -1,0 +1,835 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 5.3.3.2 (Linux)"/>
+	<meta name="author" content="alexeana"/>
+	<meta name="created" content="00:00:00"/>
+	<meta name="changed" content="2017-12-09T12:09:35.543672992"/>
+	<meta name="AppVersion" content="16.0000"/>
+	<meta name="DocSecurity" content="0"/>
+	<meta name="HyperlinksChanged" content="false"/>
+	<meta name="LinksUpToDate" content="false"/>
+	<meta name="ScaleCrop" content="false"/>
+	<meta name="ShareDoc" content="false"/>
+	<meta name="created" content="2017-12-07T11:39:00">
+	<meta name="changed" content="2017-12-08T14:40:57.493458964">
+	<style type="text/css">
+		@page { size: 21.59cm 27.94cm; margin: 2.54cm }
+		p { margin-bottom: 0.25cm; direction: ltr; color: #000000; line-height: 120%; text-align: left; orphans: 2; widows: 2 }
+		p.western { font-family: "Arial", serif; so-language: pt-BR }
+		p.cjk { font-family: "Arial"; so-language: pt-BR }
+		p.ctl { font-family: "Arial" }
+		h1 { margin-bottom: 0cm; direction: ltr; color: #2f5496; line-height: 115%; text-align: left; page-break-inside: avoid; orphans: 2; widows: 2 }
+		h1.western { font-family: "Calibri Light", serif; font-size: 16pt; so-language: pt-BR; font-weight: normal }
+		h2 { margin-top: 0.07cm; margin-bottom: 0cm; direction: ltr; color: #2f5496; line-height: 115%; text-align: left; page-break-inside: avoid; orphans: 2; widows: 2 }
+		h2.western { font-family: "Calibri Light", serif; font-size: 13pt; so-language: pt-BR; font-weight: normal }
+		h2.cjk { font-family: "Noto Sans CJK SC Regular" }
+		h2.ctl { font-family: "FreeSans" }
+		a:link { color: #0000ff }
+	</style>
+</head>
+<body lang="en-US" text="#000000" link="#0000ff" dir="ltr">
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 115%">
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 115%">
+<br/>
+
+</p>
+<h1 lang="pt-BR" class="western" align="center" style="margin-bottom: 0.5cm">
+<font size="5" style="font-size: 20pt"><b>Servidor web e apache</b></font></h1>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 115%">
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-left: 0.53cm; margin-bottom: 0cm; line-height: 100%; background: #ffffff">
+<font size="3" style="font-size: 12pt">Servidor Web é um programa de
+computador responsável por aceitar pedidos HTTP de clientes,
+geralmente os navegadores, e servi-los com respostas HTTP, incluindo
+opcionalmente dados, que geralmente são páginas web, tais como
+documentos HTML com objetos embutidos (imagens, etc.). </font>
+</p>
+<p lang="pt-BR" class="western" style="margin-left: 0.53cm; text-indent: 0.74cm; margin-bottom: 0cm; line-height: 100%; background: #ffffff">
+<font color="#000000"><font size="3" style="font-size: 12pt"><span style="background: #ffffff">Os
+servidores web mais conhecidos e usados atualmente são: o Apache,
+também conhecido como Apache HTTP Server – servidor virtual do
+Linux, e o IIS (Internet Information Service) – Servidor da
+Microsoft.</span></font></font><font color="#000000"><span style="background: #ffffff">
+</span></font>
+</p>
+<p lang="pt-BR" class="western" style="margin-left: 0.53cm; text-indent: 0.74cm; margin-bottom: 0cm; line-height: 100%; background: #ffffff">
+<font size="3" style="font-size: 12pt">O servidor Apache ou Servidor
+HTTP Apache é um dos mais bem-sucedido servidor web livre que
+existe. O Apache é responsável por disponibilizar páginas e todos
+os recursos que podem ser acessados pelo internauta. Envio de
+e-mails, mensagens, compras online e diversas outras funções podem
+ser executadas graças a servidores como o Apache</font></p>
+<p lang="pt-BR" class="western" style="margin-left: 0.53cm; margin-bottom: 0cm; line-height: 100%; background: #ffffff">
+<br/>
+
+</p>
+<h1 lang="pt-BR" class="western" align="center" style="margin-bottom: 0.5cm">
+<font size="5" style="font-size: 20pt"><b>Sistema de log no Apache</b></font></h1>
+<p lang="pt-BR" class="western" style="margin-left: 0.53cm; margin-bottom: 0cm; line-height: 100%; background: #ffffff">
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-left: 0.53cm; margin-bottom: 0cm; line-height: 100%; background: #ffffff">
+<font color="#000000"><font size="3" style="font-size: 12pt"><span lang="pt-BR"><span style="background: #ffffff">Log</span></span></font></font><font color="#000000"><span lang="pt-BR"><span style="background: #ffffff">&nbsp;</span></span></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="pt-BR"><span style="background: #ffffff">de
+dados</span></span></font></font><font color="#000000"><span lang="pt-BR"><span style="background: #ffffff">&nbsp;</span></span></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="pt-BR"><span style="background: #ffffff">é
+uma expressão utilizada para descrever o processo de registro de
+eventos relevantes num&nbsp;</span></span></font></font><a href="https://pt.wikipedia.org/wiki/Sistema_computacional"><font color="#000000"><span style="text-decoration: none"><font size="3" style="font-size: 12pt"><span lang="pt-BR"><span style="background: #ffffff">sistema
+computacional</span></span></font></span></font></a><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="pt-BR"><span style="background: #ffffff">.
+Esse registro pode ser utilizado para restabelecer o estado original
+de um sistema ou para que um administrador conheça o seu
+comportamento no passado. Um arquivo de log pode ser utilizado para
+encontrar alguns problemas de forma rápida ou até mesmo ter um
+feedback sobre as atividades e desempenho do seu servidor web. </span></span></font></font><font size="3" style="font-size: 12pt"><span lang="pt-BR">No
+Apache Web Server, o arquivo de log de acesso é instalado no
+diretório /logs durante a instalação do Apache e no Linux tem o
+nome access_log</span></font><span lang="pt-BR">.</span></p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 115%">
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 115%">
+<br/>
+
+</p>
+<h1 lang="pt-BR" class="western" align="center" style="margin-bottom: 0.5cm">
+<br/>
+<br/>
+
+</h1>
+<h1 lang="pt-BR" class="western" align="center" style="margin-bottom: 0.5cm">
+<font size="5" style="font-size: 20pt"><b>Instalar o Servidor Web</b></font></h1>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 115%">
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 115%">
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 115%">
+<font size="3" style="font-size: 12pt">Para instalação de um
+servidor web utilizaremos</font> <font size="3" style="font-size: 12pt">o
+CentOS, para isso utilizaremos o terminal.</font></p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 115%">
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 115%">
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 115%">
+<font size="3" style="font-size: 12pt">Abra o terminal e como root
+(utilize o comando sudo su para entrar como root), digite o comando:</font></p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 115%">
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="text-indent: 1.27cm; margin-bottom: 0cm; line-height: 115%">
+<font color="#333333"><font face="Courier New, serif"><font size="3" style="font-size: 12pt"><span style="background: #ffffff">#
+yum install -y httpd </span></font></font></font>
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 115%">
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 115%">
+<font color="#333333"><font size="3" style="font-size: 12pt"><span style="background: #ffffff">Esse
+comando irá instalar o pacote (o comando -y ira confirmar a
+instalação automaticamente)</span></font></font></p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 115%">
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 115%">
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 115%">
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="text-indent: 1.27cm; margin-bottom: 0cm; line-height: 115%">
+<font color="#333333"><font size="3" style="font-size: 12pt"><span style="background: #ffffff">OBS:
+Algumas versões do Linux, o comando para instalação é:</span></font></font></p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 115%">
+<br/>
+
+</p>
+<p class="western" style="margin-left: 1.27cm; text-indent: 1.27cm; margin-bottom: 0cm; line-height: 115%">
+<font color="#333333"><font face="Courier New, serif"><font size="3" style="font-size: 12pt"><span style="background: #ffffff">#
+service install -y httpd </span></font></font></font>
+</p>
+<p class="western" style="margin-left: 1.27cm; text-indent: 1.27cm; margin-bottom: 0cm; line-height: 115%">
+<font color="#333333"><font face="Helvetica, serif"><font size="3" style="font-size: 12pt"><span style="background: #ffffff">ou</span></font></font></font></p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 100%">
+<font color="#00000a"><font face="Courier New, serif"><font size="2" style="font-size: 10pt"><font color="#333333"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="background: #ffffff">#
+</span></span></font></font><font color="#333333"><font size="3" style="font-size: 12pt"><span lang="en-US">apt-get
+install </span></font></font><font color="#333333"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="background: #ffffff">-y</span></span></font></font><font color="#333333">
+</font><font color="#333333"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="background: #ffffff">httpd
+</span></span></font></font></font></font></font>
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 100%">
+<font color="#00000a"><font face="Courier New, serif"><font size="2" style="font-size: 10pt"><font color="#333333"><font face="Arial, serif"><font size="3" style="font-size: 12pt">Após
+instalado, vamos iniciá-lo:</font></font></font></font></font></font></p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 100%">
+<font color="#333333"><font face="Courier New, serif"><font size="3" style="font-size: 12pt">#
+service httpd start</font></font></font></p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 100%">
+<font color="#00000a"><img src="redes_html_a0055c48eeb8cd31.jpg" name="Imagem 4" align="bottom" width="624" height="444" border="0"/>
+
+</font>
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 100%">
+<font color="#333333"><font face="Arial, serif"><font size="3" style="font-size: 12pt">Agora
+vamos verificar se o apache está funcionando. Basta acessar o
+navegador e digitar localhost.</font></font></font></p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 100%">
+<font color="#00000a"><img src="redes_html_a40bf00ecaeabc66.png" name="Imagem 7" align="bottom" vspace="1" width="657" height="361" border="0"/>
+
+</font>
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<h1 lang="pt-BR" class="western" align="center" style="margin-bottom: 0.5cm">
+<font size="5" style="font-size: 20pt"><b>Criar um virtual host e
+hospedar página em HTML</b></font></h1>
+<h2 lang="pt-BR" class="western" style="margin-top: 0cm; margin-bottom: 0.26cm; line-height: 0.64cm; background: #ffffff">
+<br/>
+<br/>
+
+</h2>
+<p lang="pt-BR" class="western" style="margin-bottom: 0.26cm; line-height: 100%; background: #ffffff">
+<font face="Arial, serif"><font size="3" style="font-size: 12pt">Virtual
+Hosts (sites virtuais) é um recurso que permite servir mais de um
+site no mesmo servidor. Podem ser usadas diretivas específicas para
+o controle do site virtual, como nome do administrador, erros de
+acesso a página, controle de acesso e outros dados úteis para
+personalizar e gerenciar o site. </font></font>
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0.26cm; line-height: 100%; background: #ffffff">
+<br/>
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0.13cm; line-height: 100%">
+<font size="3" style="font-size: 12pt">Primeiro vamos configurar o
+arquivo de host, ele se encontra na pasta /etc/hosts. No terminal
+digite o comando echo para adicionar o ip e o site.</font></p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0.13cm; line-height: 100%">
+<font size="3" style="font-size: 12pt">No meu caso ficará</font></p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0.13cm; line-height: 100%">
+<br/>
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0.13cm; line-height: 100%">
+<font face="Courier New, serif"><font size="2" style="font-size: 10pt"><span lang="pt-BR">#
+echo ‘127.0.0.1 gti.com.br <a href="http://www.gti.com/">www.gti.com</a>.br’
+&gt;&gt; /etc/hosts</span></font></font></p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0.13cm; line-height: 100%">
+<br/>
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0.13cm; line-height: 100%">
+<img src="redes_html_42bf76ccfa54354b.png" name="Imagem 8" align="bottom" vspace="1" width="624" height="427" border="0"/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0.26cm; line-height: 100%; background: #ffffff">
+<br/>
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0.26cm; line-height: 100%; background: #ffffff">
+<br/>
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0.26cm; line-height: 100%; background: #ffffff">
+<font color="#00000a"><font face="Times New Roman, serif"><font size="3" style="font-size: 12pt"><font color="#000000"><font face="Arial, serif">Para
+criar, configurar ou adicionar um domínio virtual (virtual host) ao
+seu servidor Apache é necessário editar o arquivo httpd.conf. Este
+arquivo é responsável pela configuração do servidor web Apache.
+</font></font><font color="#000000"><font face="Arial, serif"><span style="background: #ffffff">Todas
+as configurações de modificações de acesso, restrições,
+permissões, entre outras, que forem alteradas no servidor Apache,
+devem ser feitas nesse arquivo.</span></font></font></font></font></font></p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0.26cm; line-height: 100%; background: #ffffff">
+<br/>
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 100%">
+<font color="#00000a"><font face="Arial, serif"><font size="3" style="font-size: 12pt">Para
+redirecionarmos o caminho no qual o index deve ler, precisa apenas
+alterar a linha do arquivo &quot;httpd.conf&quot; que possui o
+contexto &quot;DocumentRoot&quot;. Assim dando um novo caminho para o
+servidor reconhecer o arquivo &quot;index.html&quot;</font></font></font></p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 100%">
+<font color="#333333"><font face="Arial, serif"><font size="3" style="font-size: 12pt">Agora
+vamos editar o arquivo httpd.conf</font></font></font></p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 100%">
+<font color="#333333"><font face="Arial, serif"><font size="3" style="font-size: 12pt">Utilizaremos
+o Gedit para edição do arquivo</font></font></font></p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 100%">
+<font color="#333333"><font face="Courier New, serif"><font size="3" style="font-size: 12pt">#
+yum install -y gedit (instala o gedit)</font></font></font></p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 100%">
+<font color="#333333"><font face="Courier New, serif"><font size="3" style="font-size: 12pt">#
+gedit /etc/httpd/conf/httpd.conf (Abre e edita o arquivo)</font></font></font></p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 100%">
+<font color="#00000a"><img src="redes_html_cd045ad62a83ecad.png" name="Imagem 9" align="bottom" hspace="1" vspace="1" width="568" height="49" border="0"/>
+
+</font>
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 100%">
+<font color="#00000a"><img src="redes_html_400eb218472f5fa5.png" name="Imagem 10" align="bottom" vspace="1" width="624" height="437" border="0"/>
+
+</font>
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 100%">
+<font face="Arial, serif"><font size="3" style="font-size: 12pt">Por
+padrão a porta de acesso ao servidor vem 80, mas você pode alterar
+para outra de sua preferência. Procure a linha de comando
+NameVirtual Host *:80.</font></font></p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 100%">
+<font color="#00000a"><font face="Times New Roman, serif"><font size="3" style="font-size: 12pt"><font color="#000000"><font face="Arial, serif"><span style="background: #ffffff">Agora
+vamos criar um arquivo html. O nome do arquivo onde o site vai ficar
+hospedado deve ter o nome de&nbsp;</span></font></font><font color="#3b3838"><font face="Arial, serif"><b><span style="background: #ffffff">index.html</span></b></font></font><font color="#000000"><font face="Arial, serif"><span style="background: #ffffff">,
+para que este possa ser reconhecido pelo servidor. </span></font></font></font></font></font>
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 100%">
+<font color="#333333"><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="background: #ffffff">Criando
+o arquivo: </span></font></font></font>
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 100%">
+<font color="#00000a"><font face="Times New Roman, serif"><font size="3" style="font-size: 12pt"><font color="#333333"><font face="Courier New, serif"><span style="background: #ffffff">#
+echo ‘Teste Gti’ &gt;&gt; /var/www/html/</span></font></font><font color="#000000"><font face="Courier New, serif"><span style="background: #ffffff">index.html</span></font></font></font></font></font></p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 100%">
+<font color="#00000a"><img src="redes_html_aba923526efad2d.jpg" name="Imagem 11" align="bottom" width="718" height="73" border="0"/>
+
+</font>
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 115%">
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0.13cm; line-height: 100%">
+<font size="3" style="font-size: 12pt"><span style="background: #ffffff">Agora
+vamos reiniciar o apache para que ele pegue as novas configurações</span></font></p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0.13cm; line-height: 100%">
+<br/>
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0.13cm; line-height: 100%">
+<font face="Courier New, serif"><font size="3" style="font-size: 12pt">#
+service httpd restart</font></font></p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0.13cm; line-height: 100%">
+<br/>
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0.13cm; line-height: 100%">
+<br/>
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0.13cm; line-height: 100%">
+<br/>
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0.13cm; line-height: 100%">
+<font size="3" style="font-size: 12pt">Agora abra o navegador para
+testar:</font></p>
+<p lang="pt-BR" class="western" style="text-indent: 1.27cm; margin-bottom: 0.13cm; line-height: 100%">
+<a href="http://gti.com.br/"><font face="Courier New, serif"><font size="3" style="font-size: 12pt"><span lang="pt-BR">http://gti.com.br</span></font></font></a></p>
+<p lang="pt-BR" class="western" style="text-indent: 1.27cm; margin-bottom: 0.13cm; line-height: 100%">
+<br/>
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="text-indent: 1.27cm; margin-bottom: 0.13cm; line-height: 100%"><a name="_GoBack"></a>
+<br/>
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0.13cm; line-height: 100%">
+<img src="redes_html_d7a707dcba973c02.png" name="Imagem 13" align="bottom" vspace="1" width="624" height="259" border="0"/>
+
+</p>
+<p lang="pt-BR" class="western" style="text-indent: 1.27cm; margin-bottom: 0.13cm; line-height: 100%">
+<br/>
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="text-indent: 1.27cm; margin-bottom: 0.13cm; line-height: 100%">
+<br/>
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0.13cm; line-height: 100%">
+<br/>
+<br/>
+
+</p>
+<h1 lang="pt-BR" class="western" style="margin-bottom: 0.5cm"><br/>
+<br/>
+
+</h1>
+<h1 lang="pt-BR" class="western" align="center" style="margin-bottom: 0.5cm">
+<font size="5" style="font-size: 20pt"><b>Criar e configurar os logs
+de acesso</b></font></h1>
+<p lang="pt-BR" class="western" style="margin-bottom: 0.13cm; line-height: 100%">
+<br/>
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0.13cm; line-height: 100%">
+<font size="3" style="font-size: 12pt">Abrimos o arquivo de
+configuração httpd.conf novamente:</font></p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0.13cm; line-height: 100%">
+<font size="3" style="font-size: 12pt"># gedit </font><font color="#555555"><font face="Courier New, serif"><font size="3" style="font-size: 12pt">/etc/httpd/httpd.conf</font></font></font></p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0.13cm; line-height: 100%">
+<br/>
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0.13cm; line-height: 100%">
+<font color="#333333"><font face="Helvetica, serif"><font size="2" style="font-size: 10pt"><span style="background: #ffffff">Dentro
+do Campo&nbsp;ifModule, faça as alterações na linha LogFormat
+(utilize ctrl+f para localizar), os códigos que não devem ser
+mostrados e acrescente os que serão visualizados, alguns desses
+códigos são:</span></font></font></font></p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0.13cm; line-height: 100%">
+<br/>
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0.13cm; line-height: 100%">
+<br/>
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 115%">
+<img src="redes_html_a31ee6c23800446a.png" name="Imagem 2" align="bottom" width="624" height="559" border="0"/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 115%">
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 115%">
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 115%">
+Então é só editá-la, escolhendo as configurações da sua
+preferência.<font color="#000000"> </font>
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 115%">
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 115%">
+<font size="3" style="font-size: 12pt">Exemplo:</font></p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 115%">
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 115%">
+<img src="redes_html_789f9749a2820d37.jpg" name="Imagem 1" align="bottom" width="624" height="106" border="0"/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 115%">
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 115%">
+%h = É o endereço do IP 
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 115%">
+%u = É o nome do usuário. 
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 115%">
+%t = É a data e hora do acesso.</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 115%">
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 115%">
+O acesso log é localizado na pasta</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 115%">
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="text-indent: 1.27cm; margin-bottom: 0cm; line-height: 115%">
+/var/log/httpd</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 115%">
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 115%">
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="margin-bottom: 0cm; line-height: 115%">
+<img src="redes_html_f08df6e43ef030de.png" name="Imagem 15" align="bottom" vspace="1" width="624" height="320" border="0"/>
+
+</p>
+<p class="western" align="center" style="margin-bottom: 0cm; line-height: 100%; orphans: 0; widows: 0">
+<br/>
+
+</p>
+<p class="western" align="center" style="margin-bottom: 0cm; line-height: 100%; orphans: 0; widows: 0">
+<font face="Liberation Serif, serif"><font color="#2f5496"><font face="Calibri Light, serif"><font size="5" style="font-size: 20pt"><span lang="pt-BR"><b>Formatação</b></span></font></font></font><font size="5" style="font-size: 20pt"><b>
+</b></font><font color="#2f5496"><font face="Calibri Light, serif"><font size="5" style="font-size: 20pt"><span lang="pt-BR"><b>dos
+dados que serão armazenados no arquivo texto</b></span></font></font></font></font></p>
+<p class="western" align="center" style="margin-bottom: 0cm; line-height: 100%; orphans: 0; widows: 0">
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" align="left" style="margin-bottom: 0cm; line-height: 100%; orphans: 0; widows: 0">
+<font face="Arial, serif">Os dados foram filtrados diretamente do
+arquivo de log pelo programa Java que foi desenvolvido no projeto
+integrador, o programa lê o arquivo e trata as informações
+conforme a necessidade.</font></p>
+<p lang="pt-BR" class="western" align="left" style="margin-bottom: 0cm; line-height: 100%; orphans: 0; widows: 0">
+<font face="Arial, serif">Para o programa ler os o arquivo é
+necessário usar a importar a classe BufferedReader.</font></p>
+<p lang="pt-BR" class="western" align="left" style="margin-bottom: 0cm; line-height: 100%; orphans: 0; widows: 0">
+<font face="Arial, serif">import java.io.BufferedReader;</font></p>
+<p lang="pt-BR" class="western" align="left" style="margin-bottom: 0cm; line-height: 100%; orphans: 0; widows: 0">
+<font face="Arial, serif">Determinar um separador de informações:</font></p>
+<p class="western" align="left" style="margin-bottom: 0cm; line-height: 100%; orphans: 0; widows: 0">
+<font face="Liberation Serif, serif"><b>Figura 1</b></font></p>
+<p class="western" align="left" style="margin-bottom: 0cm; line-height: 100%; orphans: 0; widows: 0">
+<img src="redes_html_cd9971634dd38bd7.png" name="Imagem 5" align="bottom" width="618" height="128" border="0"/>
+</p>
+<p lang="pt-BR" class="western" align="left" style="margin-bottom: 0cm; line-height: 100%; orphans: 0; widows: 0">
+<font face="Arial, serif">O arquivo de log possui as informações
+separadas por um “espaço”, sendo assim o separador para
+determinar a posição da busca da informação no arquivo será um
+espaço vazio “ ”.</font></p>
+<p lang="pt-BR" class="western" align="left" style="margin-bottom: 0cm; line-height: 100%; orphans: 0; widows: 0">
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" align="left" style="margin-bottom: 0cm; line-height: 100%; orphans: 0; widows: 0">
+<font face="Arial, serif">Criar um ArrayList para armazenar as
+informações lidas do arquivo, é necessário a importação.</font></p>
+<p lang="pt-BR" class="western" align="left" style="margin-bottom: 0cm; line-height: 100%; orphans: 0; widows: 0">
+<font face="Arial, serif">import java.util.ArrayList;</font></p>
+<p lang="pt-BR" class="western" align="left" style="margin-bottom: 0cm; line-height: 100%; orphans: 0; widows: 0">
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" align="left" style="margin-bottom: 0cm; line-height: 100%; orphans: 0; widows: 0">
+<font face="Arial, serif">O construtor da classe Log ira determinar a
+sequência que as informações serão gravadas no ArrayList.  </font>
+</p>
+<p class="western" align="left" style="margin-bottom: 0cm; line-height: 100%; orphans: 0; widows: 0">
+<font face="Liberation Serif, serif"><b>Figura 2</b></font></p>
+<p class="western" align="left" style="margin-bottom: 0cm; line-height: 100%; orphans: 0; widows: 0">
+<img src="redes_html_df5f89d3254ee4ea.png" name="Figura1" align="bottom" width="714" height="121" border="0"/>
+</p>
+<p lang="pt-BR" class="western" align="left" style="margin-bottom: 0cm; line-height: 100%; orphans: 0; widows: 0">
+<font face="Arial, serif">Por exemplo, observando os dados da tabela
+1 e figura 3: </font>
+</p>
+<p lang="pt-BR" class="western" align="left" style="margin-bottom: 0cm; line-height: 100%; orphans: 0; widows: 0">
+<font face="Arial, serif">A variável “ip” é a primeira posição
+do ArrayList que recebe o primeiro array lido pelo BufferedReader que
+é o array[0]</font></p>
+<p lang="pt-BR" class="western" align="left" style="margin-bottom: 0cm; line-height: 100%; orphans: 0; widows: 0">
+<font face="Arial, serif">A variável “data” data será a segunda
+posição do ArrayList que recebera o segundo array lido pelo
+BufferedReader que é o array[3].<font size="2" style="font-size: 10pt">
+substring(13, 21)</font>E assim subsequente como na tabela abaixo.</font></p>
+<p class="western" align="left" style="margin-bottom: 0cm; line-height: 100%; orphans: 0; widows: 0">
+<font face="Liberation Serif, serif"><b>Tabela 1</b></font></p>
+<table width="738" cellpadding="5" cellspacing="0">
+	<col width="43">
+	<col width="142">
+	<col width="149">
+	<col width="139">
+	<col width="63">
+	<col width="139">
+	<tr valign="bottom">
+		<td width="43" height="9" bgcolor="#ffffff" style="background: #ffffff" style="border: 1px solid #00000a; padding: 0cm 0.12cm">
+			<p class="western" align="center" style="orphans: 0; widows: 0"><font face="Liberation Serif, serif"><font color="#000000"><font face="Calibri, serif"><font size="2" style="font-size: 10pt">ip</font></font></font></font></p>
+		</td>
+		<td width="142" bgcolor="#ffffff" style="background: #ffffff" style="border-top: 1px solid #00000a; border-bottom: 1px solid #00000a; border-left: none; border-right: 1px solid #00000a; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0cm; padding-right: 0.12cm">
+			<p class="western" align="center" style="orphans: 0; widows: 0"><font face="Liberation Serif, serif"><font color="#000000"><font face="Calibri, serif"><font size="2" style="font-size: 10pt">data</font></font></font></font></p>
+		</td>
+		<td width="149" bgcolor="#ffffff" style="background: #ffffff" style="border-top: 1px solid #00000a; border-bottom: 1px solid #00000a; border-left: none; border-right: 1px solid #00000a; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0cm; padding-right: 0.12cm">
+			<p class="western" align="center" style="orphans: 0; widows: 0"><font face="Liberation Serif, serif"><font color="#000000"><font face="Calibri, serif"><font size="2" style="font-size: 10pt">hora</font></font></font></font></p>
+		</td>
+		<td width="139" bgcolor="#ffffff" style="background: #ffffff" style="border-top: 1px solid #00000a; border-bottom: 1px solid #00000a; border-left: none; border-right: 1px solid #00000a; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0cm; padding-right: 0.12cm">
+			<p class="western" align="center" style="orphans: 0; widows: 0"><font face="Liberation Serif, serif"><font color="#000000"><font face="Calibri, serif"><font size="2" style="font-size: 10pt">fuso
+			horario</font></font></font></font></p>
+		</td>
+		<td width="63" bgcolor="#ffffff" style="background: #ffffff" style="border-top: 1px solid #00000a; border-bottom: 1px solid #00000a; border-left: none; border-right: 1px solid #00000a; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0cm; padding-right: 0.12cm">
+			<p class="western" align="center" style="orphans: 0; widows: 0"><font face="Liberation Serif, serif"><font color="#000000"><font face="Calibri, serif"><font size="2" style="font-size: 10pt">concexaoSt</font></font></font></font></p>
+		</td>
+		<td width="139" bgcolor="#ffffff" style="background: #ffffff" style="border-top: 1px solid #00000a; border-bottom: 1px solid #00000a; border-left: none; border-right: 1px solid #00000a; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0cm; padding-right: 0.12cm">
+			<p class="western" align="center" style="orphans: 0; widows: 0"><font face="Liberation Serif, serif"><font color="#000000"><font face="Calibri, serif"><font size="2" style="font-size: 10pt">navegador</font></font></font></font></p>
+		</td>
+	</tr>
+	<tr valign="bottom">
+		<td width="43" height="9" bgcolor="#ffffff" style="background: #ffffff" style="border-top: none; border-bottom: 1px solid #00000a; border-left: 1px solid #00000a; border-right: 1px solid #00000a; padding: 0cm 0.12cm">
+			<p class="western" align="center" style="orphans: 0; widows: 0"><font face="Liberation Serif, serif"><font color="#000000"><font face="Calibri, serif"><font size="2" style="font-size: 10pt">array[0]</font></font></font></font></p>
+		</td>
+		<td width="142" bgcolor="#ffffff" style="background: #ffffff" style="border-top: none; border-bottom: 1px solid #00000a; border-left: none; border-right: 1px solid #00000a; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0cm; padding-right: 0.12cm">
+			<p class="western" align="center" style="orphans: 0; widows: 0"><font face="Liberation Serif, serif"><font color="#000000"><font face="Calibri, serif"><font size="2" style="font-size: 10pt">array[3].substring(1,
+			12)</font></font></font></font></p>
+		</td>
+		<td width="149" bgcolor="#ffffff" style="background: #ffffff" style="border-top: none; border-bottom: 1px solid #00000a; border-left: none; border-right: 1px solid #00000a; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0cm; padding-right: 0.12cm">
+			<p class="western" align="center" style="orphans: 0; widows: 0"><font face="Liberation Serif, serif"><font color="#000000"><font face="Calibri, serif"><font size="2" style="font-size: 10pt">array[3].substring(13,
+			21)</font></font></font></font></p>
+		</td>
+		<td width="139" bgcolor="#ffffff" style="background: #ffffff" style="border-top: none; border-bottom: 1px solid #00000a; border-left: none; border-right: 1px solid #00000a; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0cm; padding-right: 0.12cm">
+			<p class="western" align="center" style="orphans: 0; widows: 0"><font face="Liberation Serif, serif"><font color="#000000"><font face="Calibri, serif"><font size="2" style="font-size: 10pt">array[4].replace(&quot;]&quot;,
+			&quot;&quot;)</font></font></font></font></p>
+		</td>
+		<td width="63" bgcolor="#ffffff" style="background: #ffffff" style="border-top: none; border-bottom: 1px solid #00000a; border-left: none; border-right: 1px solid #00000a; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0cm; padding-right: 0.12cm">
+			<p class="western" align="center" style="orphans: 0; widows: 0"><font face="Liberation Serif, serif"><font color="#000000"><font face="Calibri, serif"><font size="2" style="font-size: 10pt">array[8]</font></font></font></font></p>
+		</td>
+		<td width="139" bgcolor="#ffffff" style="background: #ffffff" style="border-top: none; border-bottom: 1px solid #00000a; border-left: none; border-right: 1px solid #00000a; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0cm; padding-right: 0.12cm">
+			<p class="western" align="center" style="orphans: 0; widows: 0"><font face="Liberation Serif, serif"><font color="#000000"><font face="Calibri, serif"><font size="2" style="font-size: 10pt">array[11].replace(&quot;\&quot;,
+			&quot;&quot;)</font></font></font></font></p>
+		</td>
+	</tr>
+</table>
+<p class="western" align="left" style="margin-bottom: 0cm; line-height: 100%; orphans: 0; widows: 0">
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" align="left" style="margin-bottom: 0cm; line-height: 100%; orphans: 0; widows: 0"><a name="_GoBack1"></a>
+<font face="Arial, serif">Note que os números entre colchetes
+array[“<b>8</b><b>”</b>] determina a posição lida no arquivo,
+definida pelo separador “ “ e não do ArrayList.</font></p>
+<p lang="pt-BR" class="western" align="left" style="margin-bottom: 0cm; line-height: 100%; orphans: 0; widows: 0">
+<font face="Arial, serif">Sendo que o a quantidade de arrays que
+determinará qual posição do Arraylist será usada.</font></p>
+<p class="western" align="left" style="margin-bottom: 0cm; line-height: 100%; orphans: 0; widows: 0">
+<br/>
+
+</p>
+<p class="western" align="left" style="margin-bottom: 0cm; line-height: 100%; orphans: 0; widows: 0">
+<br/>
+
+</p>
+<p class="western" align="left" style="margin-bottom: 0cm; line-height: 100%; orphans: 0; widows: 0">
+<br/>
+
+</p>
+<p class="western" align="left" style="margin-bottom: 0cm; line-height: 100%; orphans: 0; widows: 0">
+<font face="Liberation Serif, serif"><b>Figura3</b></font></p>
+<p class="western" align="left" style="margin-bottom: 0cm; line-height: 100%; orphans: 0; widows: 0">
+<img src="redes_html_ab3a32e924dab589.png" name="Imagem 3" align="bottom" vspace="1" width="716" height="377" border="0"/>
+</p>
+<p lang="pt-BR" class="western" align="left" style="margin-bottom: 0cm; line-height: 100%; orphans: 0; widows: 0">
+<font face="Arial, serif">A função “.readLine()” faz com que
+toda linha do arquivo seja lida.</font></p>
+<p lang="pt-BR" class="western" align="left" style="margin-bottom: 0cm; line-height: 100%; orphans: 0; widows: 0">
+<font face="Arial, serif">A função “.split(SEPARADOR)” separa
+as informações de acordo com o separador “ ”.</font></p>
+<p lang="pt-BR" class="western" align="left" style="margin-bottom: 0cm; line-height: 100%; orphans: 0; widows: 0">
+<font face="Arial, serif">O  BufferedReader usa um sistema de arrays,
+cada array recebe um valor “[0]”, este valor que determina a
+posição do separador “ ”, os caracteres na linha serão lidos
+do arquivo até  que o separador seja atingindo, assim que o
+separador é atingindo os caracteres serão gravados na  primeira
+posição do ArrayList, o próximo array independente da posição de
+leitura será gravado na segunda posição do ArrayList e assim por
+diante.</font></p>
+<p class="western" align="left" style="margin-bottom: 0cm; line-height: 100%; orphans: 0; widows: 0">
+<font face="Liberation Serif, serif"><font color="#ff0000"><span lang="en-US"><b>222.64.146.118</b></span></font><span lang="en-US"><b>
+- - </b></span><font color="#0000ff"><span lang="en-US"><b>[19/Jun/2005:</b></span></font><font color="#7030a0"><span lang="en-US"><b>06:44:17</b></span></font><font color="#0000ff"><span lang="en-US"><b>
+</b></span></font><span lang="en-US"><b>+0200]</b></span><font color="#0000ff"><span lang="en-US"><b>
+</b></span></font><font color="#00b050"><span lang="en-US"><b>&quot;GET
+/wximages/wxwidgets02-small.png HTTP/1.1&quot;</b></span></font><font color="#0000ff"><span lang="en-US"><b>
+</b></span></font><font color="#ff9900"><span lang="en-US"><b>200</b></span></font><font color="#0000ff"><span lang="en-US"><b>
+</b></span></font><span lang="en-US"><b>12468</b></span></font></p>
+<p class="western" align="left" style="margin-bottom: 0cm; line-height: 100%; orphans: 0; widows: 0">
+<font face="Liberation Serif, serif"><font color="#000000"><font face="Arial, serif"><span lang="pt-BR">Exemplo:
+Como referência a figura 3 e a linha de log acima. O primeiro
+separador é a “posição 0” array[0], e será gravado na
+primeira posição do ArrayList os caracteres:</span></font></font>
+<font color="#ff0000"><b>222.64.146.118</b></font><font color="#ff0000">.</font></font></p>
+<p class="western" align="left" style="margin-bottom: 0cm; line-height: 100%; orphans: 0; widows: 0">
+<font color="#ff0000"> </font><font face="Liberation Serif, serif"><font color="#000000"><font face="Arial, serif"><span lang="pt-BR">A
+leitura continuará até atingir segundo separador “posição 1”,
+não tendo array determinado será ignorado e a leitura passa para o
+próximo separador “posição 2”, que também não possui um
+array determinado.</span></font></font></font></p>
+<p class="western" align="left" style="margin-bottom: 0cm; line-height: 100%; orphans: 0; widows: 0">
+<font face="Liberation Serif, serif"><font color="#000000"><font face="Arial, serif"><span lang="pt-BR">No
+separador subsequente “posição 3” array[3]  que possui a
+sequência de caracteres</span></font></font><font color="#000000"><font face="Arial, serif"><span lang="pt-BR"><b>:
+</b></span></font></font><b> </b><font color="#0000ff"><b>[19/Jun/2005:06:44:17</b></font><font color="#000000"><font face="Arial, serif"><span lang="pt-BR">,</span></font></font><font color="#000000"><font face="Arial, serif"><span lang="pt-BR">
+</span></font></font><font color="#000000"><font face="Arial, serif"><span lang="pt-BR">porém
+este array possui a função “.substring(1, 12)” que fará com
+que os caracteres gravados na segunda posição do ArrayList seja a
+partir do caractere 1 até o caractere 12, sendo assim a informação
+na segunda posição do ArrayList será:</span></font></font>
+<font color="#0000ff"><b>19/Jun/2005</b></font>.</font></p>
+<p class="western" align="left" style="margin-bottom: 0cm; line-height: 100%; orphans: 0; widows: 0">
+<font color="#000000"> <font face="Liberation Serif, serif"><font face="Arial, serif"><span lang="pt-BR">A
+terceira posição do ArrayList será novamente a “posição 3”
+array[3] com a função “.substring(13, 21)”  os caracteres serão
+buscados a partir do caractere 13 até o caractere 21 a informação
+gravada na terceira posição do ArrayList será: </span></font></font><font color="#7030a0"><span lang="en-US"><b>06:44:17.</b></span></font></font></p>
+<p class="western" align="left" style="margin-bottom: 0cm; line-height: 100%; orphans: 0; widows: 0">
+<font face="Liberation Serif, serif"><font color="#000000"><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span lang="pt-BR">O
+próximo separador será “posição 4” </span></font></font></font><font color="#000000"><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span lang="pt-BR">array[4].replace(&quot;]&quot;,
+&quot;&quot;)</span></font></font></font><font color="#000000"><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span lang="pt-BR">
+este array possui a função </span></font></font></font><font color="#000000"><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span lang="pt-BR">“.replace(&quot;]&quot;,
+&quot;&quot;)” e como o próprio nome diz substitui o caráter “[“
+por valor nenhum “” e dados gravados na quarta posição do
+ArrayList será</span></font></font></font><font color="#000000"><font face="Arial, serif"><font size="2" style="font-size: 10pt"><span lang="pt-BR">:
+</span></font></font></font><font color="#000000"><font face="Arial, serif"><span lang="pt-BR"><b>+</b></span></font></font><span lang="en-US"><b>0200</b></span><font color="#000000"><font face="Calibri, serif"><font size="2" style="font-size: 10pt">.</font></font></font></font></p>
+<p lang="pt-BR" class="western" align="left" style="margin-bottom: 0cm; line-height: 100%; orphans: 0; widows: 0">
+<font face="Arial, serif"><font size="3" style="font-size: 12pt">Como
+não possui nenhum array determinado até a posição 8, a leitura
+das posições 5, 6 e 7 serão ignoradas até atingir a “posição
+8” array[8], </font><font size="3" style="font-size: 12pt">os dados
+gravados na quinta posição do ArrayList</font> será: <b>200</b>.</font></p>
+<p lang="pt-BR" class="western" align="left" style="margin-bottom: 0cm; line-height: 100%; orphans: 0; widows: 0">
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" align="left" style="margin-bottom: 0cm; line-height: 100%; orphans: 0; widows: 0">
+<font face="Arial, serif">Desta forma a leitura é feita dados até o
+ultimo array determinado ou o final da linha for atingido.</font></p>
+<p lang="pt-BR" class="western" align="left" style="margin-bottom: 0cm; line-height: 100%; orphans: 0; widows: 0">
+<font face="Arial, serif">Como toda a função esta dentro de um laço
+de repetição que é executado enquanto houver uma linha valida,
+desta forma é repedida toda a ação demostrada acima até que todas
+as linhas sejam lidas, e resultado será como mostrado na Figura 4.</font></p>
+<p class="western" align="left" style="margin-bottom: 0cm; line-height: 100%; orphans: 0; widows: 0">
+<br/>
+
+</p>
+<p class="western" align="left" style="margin-bottom: 0cm; line-height: 100%; orphans: 0; widows: 0">
+ <font face="Liberation Serif, serif"><b>Figura 4<img src="redes_html_9d3aed376e8a87dc.png" name="Figura2" align="bottom" hspace="1" vspace="1" width="755" height="91" border="0"/>
+</b></font></p>
+<p class="western" align="left" style="text-indent: 1.27cm; margin-bottom: 0cm; line-height: 115%; orphans: 0; widows: 0">
+<br/>
+
+</p>
+<p lang="pt-BR" class="western" style="text-indent: 1.27cm; margin-bottom: 0cm; line-height: 115%">
+<br/>
+
+</p>
+</body>
+</html>

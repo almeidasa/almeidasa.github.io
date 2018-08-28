@@ -1,0 +1,238 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 5.3.3.2 (Linux)"/>
+	<meta name="author" content="alexandre"/>
+	<meta name="created" content="2005-03-06T20:21:00"/>
+	<meta name="changed" content="2017-12-08T14:06:12.344479273"/>
+	<meta name="copyright" content="&lt;Tipo do copyright&gt;"/>
+	<meta name="data" content="&lt;dia Mês, ano&gt;"/>
+	<meta name="id_documento" content="LR"/>
+	<meta name="localização" content="&lt;caminho de acesso no CVS ou URL&gt;"/>
+	<meta name="nome_documento" content="Levantamento de Requisitos"/>
+	<meta name="nome_projeto" content="&lt;Nome do projeto&gt;"/>
+	<meta name="versão" content="&lt;Versão XX.YY&gt;"/>
+	<meta name="versão_template" content="&lt;Versão do Template&gt;"/>
+	<style type="text/css">
+		@page { margin-right: 3.17cm; margin-top: 2.54cm; margin-bottom: 1.27cm }
+		p { margin-bottom: 0.21cm; direction: ltr; color: #000000; text-align: justify; orphans: 2; widows: 2 }
+		p.western { font-family: "Verdana", sans-serif; font-size: 10pt; so-language: pt-BR }
+		p.cjk { font-family: "Times New Roman", serif; font-size: 10pt; so-language: zh-CN }
+		p.ctl { font-family: "Verdana", sans-serif; font-size: 12pt; so-language: ar-SA }
+		h1 { margin-left: 0.25cm; text-indent: -0.25cm; margin-top: 0.53cm; margin-bottom: 0.11cm; border-top: none; border-bottom: 1.00pt solid #000000; border-left: none; border-right: none; padding-top: 0cm; padding-bottom: 0.04cm; padding-left: 0cm; padding-right: 0cm; direction: ltr; color: #000000; text-align: justify; orphans: 2; widows: 2 }
+		h1.western { font-family: "Verdana", sans-serif; font-size: 14pt; so-language: pt-BR }
+		h1.cjk { font-family: "Times New Roman", serif; font-size: 14pt; so-language: zh-CN }
+		h1.ctl { font-family: "Arial", sans-serif; font-size: 16pt; so-language: ar-SA }
+		h2 { margin-top: 0.42cm; margin-bottom: 0.11cm; direction: ltr; color: #000000; text-align: justify; orphans: 2; widows: 2 }
+		h2.western { font-family: "Verdana", sans-serif; font-size: 14pt; so-language: pt-BR; font-weight: normal }
+		h2.cjk { font-family: "Times New Roman", serif; font-size: 14pt; so-language: zh-CN; font-weight: normal }
+		h2.ctl { font-family: "Arial", sans-serif; font-size: 14pt; so-language: ar-SA; font-style: italic }
+		a:link { color: #0000ff }
+		a:visited { color: #800080 }
+		a.western:visited { so-language: pt-BR }
+		a.cjk:visited { so-language: zh-CN }
+		a.ctl:visited { so-language: hi-IN }
+	</style>
+</head>
+<body lang="pt-BR" text="#000000" link="#0000ff" vlink="#800080" bgcolor="#ffffff" dir="ltr">
+
+<p class="western" align="center" style="margin-bottom: 0cm"><br/>
+
+</p>
+<p class="western" align="text-center" style="margin-bottom: 0cm"><font size="4" style="font-size: 16pt"><b>SALE - Sistema Analisador de Logs e Dados Estatíticos</b></font></p>
+<p class="western" align="text-center" style="margin-bottom: 0cm"><font size="4" style="font-size: 14pt"><b>Levantamento
+de Requisitos</b></font></p>
+
+<p class="western" style="margin-bottom: 0cm"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm"><br/>
+
+</p>
+<table width="245" cellpadding="5" cellspacing="0">
+	<col width="42">
+	<col width="183">
+	<tr valign="top">
+		<td width="42" style="border: none; padding: 0cm">
+			<p class="western" align="right">Versão:</p>
+		</td>
+		<td width="183" style="border: none; padding: 0cm">
+			<p class="western" align="left">&lt;1.6&gt;</p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="42" style="border: none; padding: 0cm">
+			<p class="western" align="right">Data:</p>
+		</td>
+		<td width="183" style="border: none; padding: 0cm">
+			<p class="western" align="left">&lt;07/12/2017&gt;</p>
+		</td>
+	</tr>
+</table>
+<p style="margin-top: 0.21cm; text-transform: uppercase"><br/>
+<br/>
+
+</p>
+<h1 class="western">1.Introdução</h1>
+<h2 class="western">1.1.Objetivo do Sistema</h2>
+<p class="western" style="margin-bottom: 0cm"><i>O software tem como
+objetivo coletar informações de um arquivo log de um servidor Web,
+e realizar a análise e o tratamento de dados a partir de arquivos de
+log.</i></p>
+<p class="western" style="margin-bottom: 0cm"><br/>
+
+</p>
+<h2 class="western">1.2.Escopo</h2>
+<p class="western" style="margin-bottom: 0cm"><i>O software </i><i>analisará</i><i>
+o arquivo log de acesso do servidor apache e identificar os dados dos
+quais farão tratamento, onde, será criado um caractere separador e
+a enumeração dos campos do log, assim, organizá-los da melhor
+maneira; realizará dados estatísticos como: </i><i>cálculos de
+média, moda, mediana, desvio padrão e frequência.</i></p>
+<p class="western" style="margin-bottom: 0cm"><br/>
+
+</p>
+<h2 class="western">1.3.Descrição dos usuários</h2>
+<p class="western"><i>O software será executado por um administrador
+da rede, </i><i>que terá</i><i> </i><i>o </i><i>controle estatístico
+de dados através de logs. </i>
+</p>
+<p class="western"><br/>
+<br/>
+
+</p>
+<p class="western"><br/>
+<br/>
+
+</p>
+<h1 class="western">2.Regras de Negócio</h1>
+<h2 class="western">2.1.RN001 – Arquivo de log</h2>
+<p class="western"><i>O software analisará um log de acessos ao
+servidor web, que deverá estar salvo em um arquivo de texto. Os
+dados serão analisados e calculados conforme os requisitos
+estatísticos</i></p>
+<h2 class="western">2.2.RN002 – Análises</h2>
+<p class="western"><i>Os cálculos de análises estatísticas poderão
+ser executados apenas após o carregamento e validação do arquivo
+de log.</i></p>
+<p class="western"><br/>
+<br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm"><br/>
+
+</p>
+<h1 class="western"><a name="_Ref70049455"></a>3.Requisitos
+Funcionais</h1>
+<p class="western" style="margin-bottom: 0cm"><br/>
+
+</p>
+<h2 class="western">3.1.RF001– Selecionar Arquivo</h2>
+<p class="western"><i>O software deverá permitir ao usuário
+selecionar um log para ser analisado.</i></p>
+<p class="western"><br/>
+<br/>
+
+</p>
+<h2 class="western">3.2.RF002– Identificar navegador</h2>
+<p class="western" style="margin-bottom: 0cm"><br/>
+
+</p>
+<p class="western"><i>O software deverá identificar no arquivo de
+log, quais navegadores foram usados e permitir que o usuário veja a
+quantidade de acessos de cada navegador.</i></p>
+<p class="western"><br/>
+<br/>
+
+</p>
+<p class="western"><br/>
+<br/>
+
+</p>
+<h2 class="western">3.3.RF003 – Quantidade de acessos</h2>
+<p class="western" style="margin-bottom: 0cm"><i>O software deverá
+verificar no log a quantidade de acessos e as datas e hora do acesso.</i></p>
+<p class="western" style="margin-bottom: 0cm"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm"><br/>
+
+</p>
+<h2 class="western">3.4.RF004 – Tratamento de dados</h2>
+<p class="western" style="margin-bottom: 0cm"><i>O software deverá
+realizar e fornecer os cálculos da média, moda, mediana, desvio
+padrão e frequência, aplicados por dia, ip, usuário ou navegador.</i></p>
+<p class="western" style="margin-bottom: 0cm"><br/>
+
+</p>
+<h2 class="western">3.5.RF005 – Visualizar IP 
+</h2>
+<p class="western" style="margin-bottom: 0cm"><i>O software deverá
+fornecer o IP que realizou o acesso.</i></p>
+<h2 class="western" style="margin-left: 0.51cm; text-indent: -0.51cm">
+<br/>
+<br/>
+
+</h2>
+<p class="western"><br/>
+<br/>
+
+</p>
+<h1 class="western"><a name="_Ref70049575"></a>4.Requisitos Não
+Funcionais</h1>
+<h2 class="western">4.1.RNF001 – Linguagem Java</h2>
+<p class="western"><i>O software deverá ser </i><i>desenvolvido</i><i>
+na linguagem de programação JAVA.</i></p>
+<h2 class="western">4.2.RNF002 – Interface</h2>
+<p class="western" style="margin-bottom: 0cm"><i>O software deverá
+ter uma interface gráfica.</i></p>
+<p class="western" style="margin-bottom: 0cm"><br/>
+
+</p>
+<h2 class="western">4.3.RNF003 – Entrega</h2>
+<p class="western" style="margin-bottom: 0cm"><i>O software deverá
+ser entregue até 08/12/2017.</i></p>
+<p class="western" style="margin-bottom: 0cm"><br/>
+
+</p>
+<h1 class="western">5.Modelo de Caso de Uso</h1>
+<p class="western"><br/>
+<br/>
+
+</p>
+<p class="western"><img src="ERS%20-%20Template%20de%20Requisitos_html_cf2c8fce267c3d07.jpg" name="Figura1" align="bottom" width="554" height="381" border="0"/>
+</p>
+<p class="western"><br/>
+<br/>
+
+</p>
+<h1 class="western">6.Protótipo</h1>
+<p class="western" style="margin-bottom: 0cm"><br/>
+
+</p>
+<p class="western"><img src="ERS%20-%20Template%20de%20Requisitos_html_26964dcc54628920.png" name="Figura2" align="bottom" width="607" height="414" border="0"/>
+</p>
+<p class="western"><br/>
+<br/>
+
+</p>
+<h1 class="western">7.Diagrama de classes</h1>
+<p class="western"><br/>
+<br/>
+
+</p>
+<p class="western"><img src="ERS%20-%20Template%20de%20Requisitos_html_45f8ac06056ffa5.jpg" name="Figura3" align="bottom" width="554" height="627" border="0"/>
+</p>
+<p class="western"><br/>
+<br/>
+
+</p>
+<p class="western"> 
+</p>
+<div title="footer">
+	<p align="right" style="margin-top: 1.17cm; margin-bottom: 0cm"><sdfield type=PAGE subtype=RANDOM format=PAGE>5</sdfield></p>
+</div>
+</body>
+</html>
