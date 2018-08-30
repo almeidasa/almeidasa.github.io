@@ -1,15 +1,16 @@
 /*   
  * Template Name: devAid - Responsive Website Template for developers
- * Version: 1.0
- * Author: Xiaoying Riley at 3rd Wave Media
- * Website: http://themes.3rdwavemedia.com/
+ * Version: 1.1
+ * Author: Xiaoying Riley
  * Twitter: @3rdwave_themes
+ * License: Creative Commons Attribution 3.0 License
+ * Website: http://themes.3rdwavemedia.com/
 */
 /* Default */
 /* ======= Base ======= */
 body {
   font-family: 'Lato', arial, sans-serif;
-  color: #444444;
+  color: #444;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -110,7 +111,7 @@ pre code {
   color: #17baef;
 }
 .header.navbar-fixed-top .main-nav .nav .nav-item a {
-  color: #666666;
+  color: #666;
 }
 .header .logo {
   margin: 0;
@@ -188,6 +189,7 @@ pre code {
 }
 .principal .title {
   font-size: 98px;
+  font-size: 5.1vw;
   color: #074f66;
   margin-top: 0;
 }
@@ -235,6 +237,64 @@ pre code {
   position: relative;
   top: -5px;
 }
+
+/* ======= PRINCIPAL MATERIAS ======= */
+.principalm {
+  background: #17baef;
+  color: #fff;
+  padding-top: 230px; /*Altura da margem superior*/
+}
+.principalm .title {
+  font-size: 98px;
+  font-size: 5.1vw;
+  color: #074f66;
+  margin-top: 0;
+}
+.principalm .title .highlight {
+  color: #eebf3f;
+}
+.principalm .intro {
+  font-size: 28px;
+  max-width: 680px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+.principalm .btns .btn {
+  margin-right: 15px;
+  font-size: 18px;
+  padding: 8px 30px;
+  margin-bottom: 350px;/*Tamanho do final da pagina*/
+}
+.principalm .meta {
+  margin-top: 120px;
+  margin-bottom: 30px;
+  color: #0a7396;
+}
+.principalm .meta li {
+  margin-right: 15px;
+}
+.principalm .meta a {
+  color: #0a7396;
+}
+.principalm .meta a:hover {
+  color: #074f66;
+}
+.principalm .social-media {
+  background: #0c86ae;
+  padding: 10px 0;
+  margin: 0 auto;
+  font-size: 14px;
+  color: #000000; 
+}
+.principalm .social-media li {
+  margin-top: 15px;
+}
+.principalm .social-media li.facebook-like {
+  margin-top: 0;
+  position: relative;
+  top: -5px;
+}
+
 /* ======= introducao ======= */
 .introducao {
   padding: 20px 0;
@@ -275,7 +335,8 @@ pre code {
 /* ======= MÓDULO I ======= */
 .moduloI {
   padding: 30px 0;
-  background: #17baef;
+  background: #81D4FA;
+  /*background: #17baef;*/
   color: #fff;
 }
 .moduloI .title {
@@ -337,11 +398,11 @@ pre code {
 /* ======= MÓDULO II ======= */
 .moduloII {
   padding: 30px 0;
-  background: #17baef;
+  background: #4FC3F7;
   color: #fff;
 }
 .moduloII .title {
-  color: #000E31;
+  color: #074f66;
   margin-top: 0;
   margin-bottom: 30px;
 }
@@ -359,15 +420,21 @@ pre code {
   margin-right: 5px;
   color: #fff;
 }
-/* ======= MODULO III =======*/
-.moduloIII {
+.moduloII .moduloII-inner {
   padding: 30px;
-  background: #63AE12;
-  color: #fff;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 400px;
 }
 
+/* ======= MODULO III =======*/
+.moduloIII {
+  padding: 30px 0;
+  background: #29B6F6;
+  color: #fff;
+}
 .moduloIII .title {
-  color: #000E31;
+  color: #074f66;
   margin-top: 0;
   margin-bottom: 30px;
 }
@@ -378,17 +445,23 @@ pre code {
   color: #042a36;
 }
 .moduloIII .feature-list li {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   color: #074f66;
 }
 .moduloIII .feature-list li .fa {
-  margin-right: 10px;
+  margin-right: 5px;
   color: #fff;
+}
+.moduloIII .moduloII-inner {
+  padding: 30px;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 400px;
 }
 /* ======= MODULO IV ======= */
 .moduloIV {
   padding: 30px;
-  background: #fff;
+  background: #03A9F4;
   color: #fff;
 }
 .moduloIV .moduloIV-inner {
@@ -401,7 +474,7 @@ pre code {
 /* ======= MÓDULO V ======= */
 .moduloV {
   padding: 30px;
-  background: #fff;
+  background: #039BE5;
   color: #fff;
 }
 .moduloV .moduloV-inner {
@@ -456,8 +529,8 @@ pre code {
   background-clip: padding-box;
 }
 .contato .author-message .speech-bubble {
-  margin-left: 155px;
-  margin-right: 165px;
+  margin-left: 152px;
+  margin-right: center;
   background: #10b2e7;
   color: #074f66;
   padding: 30px;
@@ -580,6 +653,7 @@ pre code {
   .principal .title {
     padding: 15px;
     font-size: 66px;
+	font-size: 11.1vw;
   }
   .principal .meta {
     margin-top: 60px;
@@ -702,4 +776,24 @@ pre code {
   color: #000000;
   text-align: center;
   background-color: #ff0000;
+}
+
+img {
+    max-width:100%;
+    /*width:100%;*/
+    height:auto;
+    background-size:100%;
+    background-repeat:no-repeat;
+    float:center;
+}
+
+#botao{ text-align: center }
+.botaoEnviar{
+    width: 350px;
+    text-align: center;
+    padding: 15px 20px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    background-color: #0c86ae;
+    font-size: 18px;
 }
